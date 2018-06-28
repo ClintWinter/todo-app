@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let h2 = document.createElement("p");
         h2.classList.add("todo-name");
-        h2.appendChild(document.createTextNode(val.name));
+        h2.appendChild(document.createTextNode(val.name.replace(/[']/g, "")));
 
         let deleteBtn = document.createElement("a");
         deleteBtn.classList.add("todo-delete");
