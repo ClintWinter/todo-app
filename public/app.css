@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #3E4043;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #DFE7F2;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 250px;
+}
+
+@media (max-width: 1200px) {
+    main {
+        padding: 0 30px;
+    }
+}
+
+.main-title {
+    font-size: 65px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.contact {
+    margin-bottom: 100px;
+
+    font-size: 32px;
+}
+
+.todo-add {
+    width: 100%;
+    margin-bottom: 80px;
+
+    outline: none;
+    border: none;
+    border-bottom: 5px solid #93A0B1;
+    background-color: transparent;
+
+    font-size: 45px;
+    text-align: center;
+    padding: 5px;
+    font-style: italic;
+}
+
+.todos {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.todos .todo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #9CB5D8;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 14px 36px rgba(0,0,0,16%);
+}
+
+.todos .todo[data-completed="true"] {
+    background-color: #A1A4A7;
+}
+
+.todos .todo[data-completed="true"] p {
+    color: #666769;
+    text-decoration: line-through;
+}
+
+.todos .todo[data-completed="true"]:hover {
+    background-color: rgb(179, 180, 182);
+    transition: 0.25s all ease;
+}
+
+.todos .todo[data-completed="true"]:hover p {
+    color: #666769;
+    text-decoration: line-through;
+    transition: 0.25s all ease;
+}
+
+.todos .todo[data-completed="true"]:hover .delete-todo {
+    opacity: 1;
+    transition: 0.25s all ease;
+}
+
+.todos .todo p {
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+.todos .todo .todo-delete {
+    color: #EF7676;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 45px;
+    opacity: 0;
+}
+
+.todos .todo:hover {
+    background-color: #586F8E;
+    transition: all 0.25s ease;
+}
+
+.todos .todo:hover p {
+    color: white;
+    transition: all 0.25s ease;
+}
+
+.todos .todo:hover .todo-delete {
+    opacity: 1;
+    transition: all 0.25s ease;
+}
+
+.todos .todo .todo-delete:hover {
+    color: #D85F5F;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
