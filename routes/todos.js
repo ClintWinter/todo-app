@@ -24,7 +24,7 @@ router.route("/")
 
 router.route("/:todoId")
     .put((req, res) => {
-        const sql = `UPDATE todos SET completed = ${toUpperCase(req.body.completed)} WHERE id = ${req.params.todoId}`;
+        const sql = `UPDATE todos SET completed = ${req.body.completed} WHERE id = ${req.params.todoId}`;
         db.query(sql, (err, result) => {
             if (err) res.send(err);
             res.json({success: true});
