@@ -54,6 +54,10 @@ main {
     font-style: italic;
 }
 
+.todo-add::placeholder {
+    color: #B6C1D1;
+}
+
 .todos {
     width: 100%;
 
